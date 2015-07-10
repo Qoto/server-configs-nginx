@@ -31,7 +31,9 @@ server {
     fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
     include        fastcgi_params;
   }
-
+  location = /favicon.ico {
+    log_not_found off;
+  }
   # Path for static files
   root /var/www/example.com/public;
 
